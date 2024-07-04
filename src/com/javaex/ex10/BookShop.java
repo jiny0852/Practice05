@@ -29,6 +29,23 @@ public class BookShop {
         // (1) 입력된 번호에 맞는 책을 찾아 대여 되었음(상태코드=0)을 체크 합니다.
         // 코드작성
         
+        books[num-1].rent();
+        /*
+        for (int i = 0 ; i < books.length ; i++) {
+        	
+        	books[i].rent(num);
+        	books[i].print();
+        	
+        	int c = books[i].getStateCode();
+        	if (c == 1) {
+        		System.out.println(books[i].getBookNo() + " : 재고있음");
+        	} else if ( c == 0 ) {
+        		System.out.println(books[i].getBookNo() + " : 대여중");
+        	}
+        	
+        	
+        }*/
+        
         
 
         System.out.println("*****도서 정보 출력하기******");
@@ -41,5 +58,27 @@ public class BookShop {
     private static void displayBookInfo(Book[] books) {
         
     	//코드작성
+    	for (int i = 0 ; i < books.length ; i++) {
+    		
+    		if (books[i].getStateCode() == 1) {
+    			System.out.println(books[i].getBookNo() + " 책 제목:" + books[i].getTitle() 
+    			             	+ ", 작가:" + books[i].getAuthor() + ", "
+    					    	+ "대여 유무 : 재고있음");
+    			
+    		} else if (books[i].getStateCode() == 0) {
+    			System.out.println(books[i].getBookNo() + " 책 제목:" + books[i].getTitle() 
+    			             	+ ", 작가:" + books[i].getAuthor() + ", "
+    					    	+ "대여 유무 : 대여중");
+    			
+    			
+    			/*
+        		System.out.println(books[i].getBookNo() + " 책 제목:" + books[i].getTitle() 
+        			             	+ ", 작가:" + books[i].getAuthor() + ", "
+        					    	+ "대여 유무 : " + books[i].getStateCode());*/
+        		
+    		}
+    	}
+    	
     }
+
 }
