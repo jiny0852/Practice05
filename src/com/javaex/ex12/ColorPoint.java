@@ -2,7 +2,7 @@ package com.javaex.ex12;
 
 public class ColorPoint extends Point {
 
-	private String color;
+	private String color = "";
 	
 	
 	public ColorPoint() {
@@ -18,7 +18,7 @@ public class ColorPoint extends Point {
 		super.setX(x);
 		super.setY(y);
 		this.color = color; 	
-		//System.out.println("ColorPoint(2-1)");
+		System.out.println("ColorPoint(2-1)");
 	}
 	
 	

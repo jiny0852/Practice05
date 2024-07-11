@@ -6,12 +6,12 @@ public class Point {
 	private int y;
 	
 	public Point() {
-		//System.out.println("Point()");
+		System.out.println("Point()");
 	}
 	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
-		//System.out.println("Point(2)");
+		System.out.println("Point(2)");
 	}
 	
 	
